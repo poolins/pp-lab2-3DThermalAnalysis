@@ -9,7 +9,6 @@ public class Solver {
 
     public Solver(int parallel) {
         executorService = Executors.newFixedThreadPool(parallel);
-
     }
 
     static void step(double[][][] t0, double[][][] t1, int sizeX, int sizeY, int sizeZ,
@@ -20,8 +19,7 @@ public class Solver {
             final int ii = i;
             executorService.submit(() -> {
                 keyStep(t0, t1, sizeX, sizeY, sizeZ,
-                        dx, dy, dz, dt, ii
-                        , k, T - 5, h);
+                        dx, dy, dz, dt, ii, k, T - 5, h);
                 countDownLatch.countDown();
             });
         }

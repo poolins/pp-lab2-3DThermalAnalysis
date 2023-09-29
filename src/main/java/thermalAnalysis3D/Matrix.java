@@ -29,12 +29,12 @@ public class Matrix {
                         System.out.print("\t" + matrix[i][j][k]);
                     } else {
                         System.out.print("\t" + matrix[i][j][k]);
-                        System.out.println("");
+                        System.out.println();
                     }
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
-        System.out.println("\n==========\n");
+        System.out.println();
     }
 }
